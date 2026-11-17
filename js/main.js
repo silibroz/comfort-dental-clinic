@@ -57,19 +57,25 @@ const GENERAL_MSG = `Hi ${CLINIC}, I'd like to book an appointment.` + ENDING;
 
 const waUrl = (text) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
 
+// Images in /img, same order as SERVICES above
+const IMAGES = ["checkup", "cleaning", "filling", "root-canal", "braces", "whitening", "extraction", "implants", "kids"];
+
 // ---- services grid ----
 const grid = document.getElementById("serviceGrid");
 SERVICES.forEach((s, i) => {
   const card = document.createElement("article");
   card.className = "service";
   card.innerHTML = `
-    <span class="service-no">${String(i + 1).padStart(2, "0")}</span>
-    <h3></h3>
-    <p></p>
-    <a class="btn btn-wa btn-sm" target="_blank" rel="noopener">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/></svg>
-      Book on WhatsApp
-    </a>`;
+    <img class="service-img" src="/img/${IMAGES[i]}.webp" width="468" height="286" loading="lazy" alt="" />
+    <div class="service-body">
+      <h3></h3>
+      <p></p>
+      <a class="btn btn-wa btn-sm" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3z"/></svg>
+        <span class="long">Book on WhatsApp</span><span class="short">Book</span>
+      </a>
+    </div>`;
+  card.querySelector("img").alt = s.name;
   card.querySelector("h3").textContent = s.name;
   card.querySelector("p").textContent = s.desc;
   card.querySelector("a").href = waUrl(s.msg + ENDING);
