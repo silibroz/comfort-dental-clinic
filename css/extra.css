@@ -34,7 +34,7 @@
 @media (max-width: 900px) { .request { grid-template-columns: 1fr; } }
 
 /* Google rating badge */
-.g-rating { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px 8px 12px; margin-bottom: 1.4rem; text-decoration: none; box-shadow: 0 4px 14px -8px rgba(22, 48, 45, .25); font-size: .92rem; transition: border-color .15s; }
+.g-rating { color: var(--ink); display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px 8px 12px; margin-bottom: 1.4rem; text-decoration: none; box-shadow: 0 4px 14px -8px rgba(22, 48, 45, .25); font-size: .92rem; transition: border-color .15s; }
 .g-rating:hover { border-color: var(--teal); }
 .g-logo { width: 18px; height: 18px; }
 .g-stars { color: #FBBC05; letter-spacing: 1px; font-size: 1rem; }
@@ -52,3 +52,33 @@
   .hero { padding-top: 20px; }
 }
 @media (max-width: 400px) { .hours-chip { font-size: .75rem; padding: 5px 10px; left: 10px; bottom: 10px; } }
+
+/* ===== Desktop: full-width hero banner ===== */
+@media (min-width: 901px) {
+  .hero {
+    min-height: clamp(560px, 40vw, 760px);
+    display: flex; align-items: center;
+    padding: 64px 0;
+    background:
+      linear-gradient(90deg, rgba(7, 46, 43, .94) 0%, rgba(7, 46, 43, .85) 30%, rgba(7, 46, 43, .3) 46%, rgba(7, 46, 43, 0) 56%),
+      url("/img/hero-wide.webp") 80% center / cover no-repeat,
+      #0F5C55;
+    color: #fff;
+  }
+  .hero::before { display: none; }
+  .hero-grid { grid-template-columns: 1fr; width: min(1120px, 100% - 40px); }
+  .hero-copy { max-width: 520px; }
+  .hero-banner { display: none; }
+  .hero .eyebrow { color: #9FE3D3; }
+  .hero h1 { color: #fff; }
+  .hero h1 em { color: #9FE3D3; }
+  .hero .lead { color: rgba(255, 255, 255, .85); }
+  .hero .btn-primary { background: #fff; color: var(--teal); }
+  .hero .btn-primary:hover { background: var(--mint); }
+  .hero .btn-ghost { border-color: rgba(255, 255, 255, .7); color: #fff; }
+  .hero .btn-ghost:hover { background: #fff; color: var(--teal); border-color: #fff; }
+  .hero .hero-points { color: rgba(255, 255, 255, .85); }
+  .hero .hero-points li::before { color: #9FE3D3; }
+  .hero .g-rating { border-color: transparent; }
+}
+@media (min-width: 901px) and (max-width: 1366px) { .hero { padding: 40px 0; min-height: 540px; } }
