@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comfort Dental Clinic — Dr. Arnab Saha</title>
+  <meta name="description" content="Comfort Dental Clinic by Dr. Arnab Saha. Check-ups, fillings, root canals, braces, whitening, implants and more. Book your appointment on WhatsApp." />
+  <meta name="theme-color" content="#0F5C55" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/extra.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%230F5C55' d='M20 6c-9 0-15 7-15 17 0 9 4 14 6 22 2 9 4 15 8 15 5 0 5-12 13-12s8 12 13 12c4 0 6-6 8-15 2-8 6-13 6-22 0-10-6-17-15-17-6 0-8 3-12 3S26 6 20 6z'/></svg>" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="brand">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 6c-9 0-15 7-15 17 0 9 4 14 6 22 2 9 4 15 8 15 5 0 5-12 13-12s8 12 13 12c4 0 6-6 8-15 2-8 6-13 6-22 0-10-6-17-15-17-6 0-8 3-12 3S26 6 20 6z"/></svg>
+      <span>Comfort Dental Clinic</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#doctor">Our Doctor</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#" class="btn btn-primary btn-sm" data-wa="general">Book on WhatsApp</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Dr. Arnab Saha · Dental Surgeon</p>
+        <h1>Healthy smiles,<br /><em>without the stress.</em></h1>
+        <p class="lead">Gentle, honest dental care for the whole family. Choose your treatment and message us on WhatsApp. We'll reply with a time that suits you.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">Choose a treatment</a>
+          <a href="tel:+918250614548" class="btn btn-ghost">Call 82506 14548</a>
+        </div>
+        <ul class="hero-points">
+          <li>Sterilised instruments</li>
+          <li>Painless procedures</li>
+          <li>Quick WhatsApp replies</li>
+        </ul>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-top"><span class="pulse"></span><span>Book in 3 taps</span></div>
+        <ol class="how">
+          <li><span>1</span>Pick a treatment below</li>
+          <li><span>2</span>WhatsApp opens with a ready message</li>
+          <li><span>3</span>Add your preferred time and send</li>
+        </ol>
+        <a href="#" class="btn btn-light btn-block" data-wa="general">Message us on WhatsApp →</a>
+        <div class="hours-mini">
+          <!-- EDIT: clinic hours -->
+          <div><span>Mon – Sat</span><strong>10 AM – 8 PM</strong></div>
+          <div><span>Sunday</span><strong>Closed</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Treatments</p>
+        <h2>What can we help you with?</h2>
+        <p class="muted">Tap <strong>Book on WhatsApp</strong> on any treatment. Your message is ready to send.</p>
+      </div>
+      <div class="services" id="serviceGrid"></div>
+    </div>
+  </section>
+
+  <!-- QUICK REQUEST -->
+  <section class="section section-tint" id="request">
+    <div class="wrap request">
+      <div>
+        <p class="eyebrow">Appointment request</p>
+        <h2>Tell us when suits you</h2>
+        <p class="muted">Fill this in and we'll open WhatsApp with all the details. The clinic will confirm your time on WhatsApp.</p>
+      </div>
+      <form class="booker" id="requestForm" novalidate>
+        <div class="form-grid">
+          <label>Your name <input name="name" required maxlength="60" placeholder="e.g. Rahul Sharma" /></label>
+          <label>Treatment <select name="service" id="requestService"></select></label>
+          <label>Preferred date <input name="date" type="date" /></label>
+          <label>Preferred time
+            <select name="time">
+              <option>Any time</option>
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+            </select>
+          </label>
+          <label class="full">Problem / notes <span class="muted">(optional)</span>
+            <textarea name="notes" rows="3" maxlength="300" placeholder="e.g. pain in lower left tooth since 2 days"></textarea>
+          </label>
+        </div>
+        <p class="form-error" id="requestError" role="alert"></p>
+        <button class="btn btn-wa btn-block" type="submit">Send on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- DOCTOR -->
+  <section class="section" id="doctor">
+    <div class="wrap doctor">
+      <div class="doctor-photo" aria-hidden="true"><span>Doctor photo</span></div>
+      <div>
+        <p class="eyebrow">Meet your dentist</p>
+        <h2>Dr. Arnab Saha</h2>
+        <!-- EDIT: qualifications -->
+        <p class="muted">BDS · Dental Surgeon</p>
+        <p>Dr. Saha believes a visit to the dentist should feel calm and comfortable. He takes time to explain every treatment, the options and the costs before starting, so there are no surprises. Nervous patients and children are always welcome.</p>
+        <div class="doctor-actions">
+          <a href="#" class="btn btn-primary" data-wa="general">Book on WhatsApp</a>
+          <a href="tel:+918250614548" class="btn btn-ghost">Call now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="section section-tint" id="visit">
+    <div class="wrap visit">
+      <div>
+        <p class="eyebrow">Visit us</p>
+        <h2>Find the clinic</h2>
+        <!-- EDIT: address -->
+        <p class="address">Clinic address line 1,<br />Area, City – PIN</p>
+        <div class="visit-list">
+          <div><span>Phone</span><a href="tel:+918250614548">+91 82506 14548</a></div>
+          <div><span>WhatsApp</span><a href="#" data-wa="general">+91 82506 14548</a></div>
+          <div><span>Hours</span><p>Mon–Sat: 10 AM–8 PM<br />Sunday: Closed</p></div>
+        </div>
+        <!-- EDIT: replace q= with the clinic's Google Maps link -->
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=Comfort+Dental+Clinic" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="map">
+        <!-- Replace with Google Maps embed iframe (Maps > Share > Embed a map) -->
+        <span>Google Map goes here</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Comfort Dental Clinic · Dr. Arnab Saha</span>
+    <span class="muted">Website by Crool Technologies</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="general" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.3 14.5 14.5 0 0 0 5.6 4.9c2 .9 2.9 1 3.9.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.4z"/></svg>
+</a>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>
