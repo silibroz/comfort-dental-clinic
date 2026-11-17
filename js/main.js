@@ -1,7 +1,7 @@
 // ============================================================
 //  EDIT HERE: WhatsApp number + services and their messages
 // ============================================================
-const WHATSAPP = "918250614548"; // country code + number, digits only
+const WHATSAPP = "917098168009"; // country code + number, digits only
 const CLINIC = "Comfort Dental Clinic";
 
 const SERVICES = [
